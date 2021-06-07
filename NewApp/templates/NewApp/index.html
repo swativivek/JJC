@@ -1,0 +1,386 @@
+{% load static %}
+{% block body %}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <title>JJC PRIVATE LIMITED -- THE GARDEN OF HEAVENLY TEA</title>
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="{% static 'NewApp/assets/css/bootstrap.min.css' %} ">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'NewApp/assets/css/font-awesome.css' %}">
+
+    <link rel="stylesheet" href="{% static 'NewApp/assets/css/templatemo-klassy-cafe.css' %}">
+
+    <link rel="stylesheet" href="{% static 'NewApp/assets/css/owl-carousel.css' %}">
+
+    <link rel="stylesheet" href="{% static 'NewApp/assets/css/lightbox.css' %}">
+
+</head>
+    
+    <body>
+    
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** 
+                        
+                        <a href="{% url 'index' %}" class="logo">
+                            <img src="{% static 'NewApp/assets/images/klassy-logo.png' %}"  width="10%" height="8%">
+                        </a>-->
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                            <li class="scroll-to-section"><a href="#about">About</a></li>
+                           	
+                        <!-- 
+                            <li class="submenu">
+                                <a href="javascript:;">Drop Down</a>
+                                <ul>
+                                    <li><a href="#">Drop Down Page 1</a></li>
+                                    <li><a href="#">Drop Down Page 2</a></li>
+                                    <li><a href="#">Drop Down Page 3</a></li>
+                                </ul>
+                            </li>
+                        -->
+                            <li class="scroll-to-section"><a href="#menu">Tea Varieties</a></li>
+                            
+                            <li class="submenu">
+                                <a href="javascript:;">Features</a>
+                                <ul>
+                                    <li><a href="#">Features Page 1</a></li>
+                                    <li><a href="#">Features Page 2</a></li>
+                                    <li><a href="#">Features Page 3</a></li>
+                                    <li><a href="#">Features Page 4</a></li>
+                                </ul>
+                            </li>
+                            <!-- <li class=""><a rel="sponsored" href="https://templatemo.com" target="_blank">External URL</a></li> -->
+                            <li class="scroll-to-section"><a href="#reservation">Contact Us</a></li> 
+                        </ul>        
+                        <a class='menu-trigger'>
+                            <span>Tea Varieties</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Main Banner Area Start ***** -->
+    <div id="top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="left-content">
+                        <div class="inner-content">
+                            <h4>Best Brew</h4>
+                            <h6>THE BEST EXPERIENCE</h6>
+                                <p>
+                                    {% if messages %}
+                                    <p>
+                                    {% for message in messages %}
+                                        <p{% if message.tags is 'success' %} class=""{% endif %}>{{ message }}</p>
+                                    {% endfor %}
+                                    </p>
+                                    {% endif %}
+                                </p>
+                           
+                            <div class="main-white-button scroll-to-section">
+                                <a href="#about">About</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="main-banner header-text">
+                        <div class="Modern-Slider">
+                          <!-- Item -->
+                          <div class="item">
+                            <div class="img-fill">
+                                <img src="{% static 'NewApp/assets/images/tea1.jpg' %}" alt="">
+                            </div>
+                          </div>
+                          <!-- // Item -->
+                          <!-- Item -->
+                          <div class="item">
+                            <div class="img-fill">
+                                <img src="{% static 'NewApp/assets/images/tea2.jpg' %}" alt="">
+                            </div>
+                          </div>
+                          <!-- // Item -->
+                          <!-- Item -->
+                          <div class="item">
+                            <div class="img-fill">
+                                <img src="{% static 'NewApp/assets/images/tea3.jpg' %}" alt="">
+                            </div>
+                          </div>
+                          <!-- // Item -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Main Banner Area End ***** -->
+
+    <!-- ***** About Area Starts ***** -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                    <div class="left-text-content">
+                        <div class="section-heading">
+                            <h6>About Us</h6>
+                            <h2>We Leave A Delicious Memory For You</h2>
+                        </div>
+                        <p>Best Brew is one of the best tea. <br><br></p>
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="{% static 'NewApp/assets/images/tea4.jpg' %}" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img src="{% static 'NewApp/assets/images/tea5.jpg' %}" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img src="{% static 'NewApp/assets/images/tea6.jpg' %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                    <div class="right-content">
+                        <div class="thumb">
+                            <a rel="nofollow" href="https://www.canva.com/design/DAEFJYDO6A8/yCM_4X7PVZ3MYC9N0sVicw/view?utm_content=DAEFJYDO6A8&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"><i class="fa fa-play"></i></a>
+                            <img src="{% static 'NewApp/assets/images/about-video-bg.jpg' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** About Area Ends ***** -->
+
+    <!-- ***** Menu Area Starts ***** -->
+    <section class="section" id="menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="section-heading">
+                        <h6>Tea Varieties</h6>
+                        <h2>Our selection of tea with quality taste</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-item-carousel">
+            <div class="col-lg-12">
+                <div class="owl-menu-item owl-carousel">
+                    <div class="item">
+                        <div class='card card1'>
+                            <div class="price"><h6>320 Rs</h6></div>
+                            <div class='info'>
+                              <h1 class='title'>Classic gold</h1>
+                              <p class='description'>Bigger Granules with awesome flavour</p>
+                              <div class="main-text-button">
+                                  <div class="scroll-to-section"><a href="#reservation">Buy<i class="fa fa-angle-down"></i></a></div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class='card card2'>
+                            <div class="price"><h6>320 Rs</h6></div>
+                            <div class='info'>
+                              <h1 class='title'>Extra Strong</h1>
+                              <p class='description'>Smaller Granules with awesome taste</p>
+                              <div class="main-text-button">
+                                  <div class="scroll-to-section"><a href="#reservation">Buy <i class="fa fa-angle-down"></i></a></div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Menu Area Ends ***** -->
+
+    
+
+    <!-- ***** Reservation Us Area Starts ***** -->
+    <section class="section" id="reservation">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 align-self-center">
+                    <div class="left-text-content">
+                        <div class="section-heading">
+                            <h6>Contact Us</h6>
+                            <h2>Here You can enquire or buy</h2>
+                        </div>
+                        <p>Best taste with best flavour with best fragrance</p>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="phone">
+                                    <i class="fa fa-phone"></i>
+                                    <h4>Phone Numbers</h4>
+                                    <span><a href="#">080-090-0000</a><br><a href="#">080-000-0000</a></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="message">
+                                    <i class="fa fa-envelope"></i>
+                                    <h4>Emails</h4>
+                                    <span><a href="#">jjcpvtltd123@gmail.com</a><br></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-form">
+                        <form id="contact" action="" method="post">
+                        {% csrf_token %}
+                          <div class="row">
+                            <div class="col-lg-12">
+                                <h4>Enquiry</h4>
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                              <fieldset>
+                                <input name="name" type="text" id="name" placeholder="Your Name*" required="">
+                              </fieldset>
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                              <fieldset>
+                              <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email Address" required="">
+                            </fieldset>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                              <fieldset>
+                                <select value="number-guests" name="number-guests" id="number-guests">
+                                    <option value="number-guests">Name of variety</option>
+                                    <option name="Classic gold" id="Classic gold">Classic gold</option>
+                                    <option name="Extra strong" id="Extra strong">Extra strong</option>
+                                    
+                                </select>
+                              </fieldset>
+                            </div>
+                            <div class="col-lg-6">
+                                <div id="filterDate2">    
+                                  <div class="input-group date" data-date-format="dd/mm/yyyy">
+                                    <input  name="date" id="date" type="text" class="form-control" placeholder="dd/mm/yyyy">
+                                    <div class="input-group-addon" >
+                                      <span class="glyphicon glyphicon-th"></span>
+                                    </div>
+                                  </div>
+                                </div>   
+                            </div>
+                            <div class="col-lg-12">
+                              <fieldset>
+                                <textarea name="message" rows="6" id="message" placeholder="Message" required=""></textarea>
+                              </fieldset>
+                            </div>
+                            <div class="col-lg-12">
+                              <fieldset>
+                                <button type="submit" id="form-submit" class="main-button-icon">Make An Enquiry</button>
+                              </fieldset>
+                            </div>
+                          </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Reservation Area Ends ***** -->
+
+    
+    <!-- ***** Footer Start ***** -->
+  <!--  <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-xs-12">
+                    <div class="right-text-content">
+                            <ul class="social-icons">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xs-12">
+                    <div class="logo">
+                        <a href="{% url 'index' %}"><img src="{% static 'NewApp/assets/images/klassy-logo.png' %}"  width="10%" height="10%" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xs-12">
+                    <div class="left-text-content">
+                        <p>© Copyright JJC PVT LTD.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+-->
+    <!-- jQuery -->
+    <script src="{% static 'NewApp/assets/js/jquery-2.1.0.min.js' %}"></script>
+
+    <!-- Bootstrap -->
+    <script src="{% static 'NewApp/assets/js/popper.js' %}"></script>
+    <script src="{% static 'NewApp/assets/js/bootstrap.min.js' %}"></script>
+
+    <!-- Plugins -->
+    <script src="{% static 'NewApp/assets/js/owl-carousel.js' %}"></script>
+    <script src="{% static 'NewApp/assets/js/accordions.js' %}"></script>
+    <script src="{% static 'NewApp/assets/js/datepicker.js' %}"></script>
+    <script src="{% static 'NewApp/assets/js/scrollreveal.min.js' %}"></script>
+    <script src="{% static 'NewApp/assets/js/waypoints.min.js' %}"></script>
+    <script src="{% static 'NewApp/assets/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'NewApp/assets/js/imgfix.min.js' %}"></script> 
+    <script src="{% static 'NewApp/assets/js/slick.js' %}"></script> 
+    <script src="{% static 'NewApp/assets/js/lightbox.js' %}"></script> 
+    <script src="{% static 'NewApp/assets/js/isotope.js' %}"></script> 
+    
+    <!-- Global Init -->
+    <script src="{% static 'NewApp/assets/js/custom.js' %}"></script>
+    <script>
+
+        $(function() {
+            var selectedClass = "";
+            $("p").click(function(){
+            selectedClass = $(this).attr("data-rel");
+            $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("."+selectedClass).fadeOut();
+            setTimeout(function() {
+              $("."+selectedClass).fadeIn();
+              $("#portfolio").fadeTo(50, 1);
+            }, 500);
+                
+            });
+        });
+
+    </script>
+  {% endblock %}
